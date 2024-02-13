@@ -1,19 +1,18 @@
 <!DOCTYPE html>
+
 <head>
   <title>
-    kantarow HP
+    kantarowのページ
   </title>
   <link rel="icon" href="favicon.ico">
 </head>
+
 <body>
   <h1>
-    kantarow
+    🚧kantarow
   </h1>
-  <h2>
-    事業内容
-  </h2>
   <p>
-    Webアプリケーションを中心としたソフトウェア開発を請け負います。
+    Webアプリケーションを中心としたソフトウェアエンジニアです。
   </p>
   <h2>
     技術スタック
@@ -73,5 +72,197 @@
       <a href="https://x.com/kantarow2813">X（旧Twitter）</a>
     </li>
   </ul>
- </body>
+  <h2>
+    💲Marquee Slot Machine💵
+  </h2>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <marquee direction="down" truespeed="true" scrolldelay="30" height="80px" id="reelLeft">
+            <h1>
+              🍇
+              <br>
+              🐈
+              <br>
+              🍇
+              <br>
+              BAR
+              <br>
+              🍒
+              <br>
+              🍇
+              <br>
+              🐈
+              <br>
+              🍇
+              <br>
+              🤡
+              <br>
+              7✨
+              <br>
+              🍇
+              <br>
+              🐈
+              <br>
+              🍇
+              <br>
+              🍒
+              <br>
+              BAR
+              <br>
+              🍇
+              <br>
+              🐈
+              <br>
+              🍇
+              <br>
+              🐈
+              <br>
+              7✨
+              <br>
+              🔔
+            </h1>
+          </marquee>
+        </td>
+        <td>
+          <marquee direction="down" truespeed="true" scrolldelay="30" height="80px" id="reelCenter">
+            <h1>
+              🤡
+              <br>
+              🍒
+              <br>
+              🍇
+              <br>
+              BAR
+              <br>
+              🐈
+              <br>
+              🍒
+              <br>
+              🍇
+              <br>
+              🔔
+              <br>
+              🐈
+              <br>
+              🍒
+              <br>
+              🍇
+              <br>
+              BAR
+              <br>
+              🐈
+              <br>
+              🍒
+              <br>
+              🍇
+              <br>
+              🔔
+              <br>
+              🐈
+              <br>
+              🍒
+              <br>
+              🍇
+              <br>
+              7✨
+              <br>
+              🐈
+            </h1>
+          </marquee>
+        </td>
+        <td>
+          <marquee direction="down" truespeed="true" scrolldelay="30" height="80px" id="reelRight">
+            <h1>
+              🐈
+              <br>
+              🔔
+              <br>
+              🤡
+              <br>
+              🍇
+              <br>
+              🐈
+              <br>
+              🔔
+              <br>
+              🤡
+              <br>
+              🍇
+              <br>
+              🐈
+              <br>
+              🔔
+              <br>
+              🤡
+              <br>
+              🍇
+              <br>
+              🐈
+              <br>
+              🔔
+              <br>
+              🤡
+              <br>
+              🍇
+              <br>
+              🐈
+              <br>
+              🔔
+              <br>
+              BAR
+              <br>
+              7✨
+              <br>
+              🍇
+            </h1>
+          </marquee>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button id="stopReelLeft">●</button>
+        </td>
+        <td>
+          <button id="stopReelCenter">●</button>
+        </td>
+        <td>
+          <button id="stopReelRight">●</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button id="startReel">Start</button>
+</body>
 
+<script>
+  let reelLeft = document.getElementById("reelLeft");
+  let reelCenter = document.getElementById("reelCenter");
+  let reelRight = document.getElementById("reelRight");
+
+  let stopReelLeftBtn = document.getElementById("stopReelLeft")
+  let stopReelCenterBtn = document.getElementById("stopReelCenter")
+  let stopReelRightBtn = document.getElementById("stopReelRight")
+
+  let startReelBtn = document.getElementById("startReel")
+
+  const stopReelLeft = () => {
+    reelLeft.stop();
+  }
+  const stopReelCenter = () => {
+    reelCenter.stop();
+  }
+  const stopReelRight = () => {
+    reelRight.stop();
+  }
+  const startReel = () => {
+    reelLeft.start();
+    reelCenter.start();
+    reelRight.start();
+  }
+  stopReelLeftBtn.addEventListener('click', stopReelLeft)
+  stopReelCenterBtn.addEventListener('click', stopReelCenter)
+  stopReelRightBtn.addEventListener('click', stopReelRight)
+  startReelBtn.addEventListener('click', startReel)
+</script>
